@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        p {
+            font-size: 20px;
+        };
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1>Survey Questions</h1>
+        <hr>
+        <br>
+        <h3>About You</h3>
+    
+
+    <form>
+            <div class="form-group">
+              <label for="name">Name (Required)</label>
+              <input type="name" class="form-control" id="name" aria-describedby="name">
+            </div>
+            <div class="form-group">
+              <label for="photo">Link to Photo Image (Required)</label>
+              <input type="link" class="form-control" id="photoLink">
+            </div>
+           <hr>
+           <h3>Question 1</h3>
+           <p>You have a desire to go fast.</p>
+            <select id="q1">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h3>Question 2</h3>
+           <p>While you prefer a primary weapon, you still rely on various items to complete your quest</p>
+            <select id="q2">
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+            <br>
+            <br>
+            <h3>Question 3</h3>
+            <p>You consider yourself to be more agile than you look.</p>
+             <select id="q3">
+                 <option value="1">1 (Strongly Disagree)</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5 (Strongly Agree)</option>
+             </select>
+             <br>
+             <br>
+             <h3>Question 4</h3>
+             <p>You prefer to observe your surroundings and leave no stone unturned.</p>
+              <select id="q4">
+                  <option value="1">1 (Strongly Disagree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <br>
+              <br>
+              <h3>Question 5</h3>
+              <p>You prefer the company of others to help you on your quest.</p>
+               <select id="q5">
+                   <option value="1">1 (Strongly Disagree)</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5 (Strongly Agree)</option>
+               </select>
+               <br>
+               <br>
+               <h3>Question 6</h3>
+               <p>You tend to go out of your way to be the center of attention.</p>
+                <select id="q6">
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <h3>Question 7</h3>
+                <p>You typically don't question your surroundings, no matter how strange.</p>
+                 <select id="q7">
+                     <option value="1">1 (Strongly Disagree)</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5 (Strongly Agree)</option>
+                 </select>
+                 <br>
+                 <br>
+                 <h3>Question 8</h3>
+                 <p>You find communication to be unnecessary, but have no problems getting your point across.</p>
+                  <select id="q8">
+                      <option value="1">1 (Strongly Disagree)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (Strongly Agree)</option>
+                  </select>
+                  <br>
+                  <br>
+                  <h3>Question 9</h3>
+                  <p>Sometimes your actions make you out to be the bad guy.</p>
+                   <select id="q9">
+                       <option value="1">1 (Strongly Disagree)</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5 (Strongly Agree)</option>
+                   </select>
+                   <br>
+                   <br>
+                   <h3>Question 10</h3>
+                   <p>No matter how hectic life can be, you always find time to let loose and have fun.</p>
+                    <select id="q10">
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <br>
+                    <br>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">Submit</button>
+          </form>
+
+          <hr>
+
+          <div class="links"><a href="#">API Friends List</a> | <a href="#">GitHub</a></div>
+    </div>
+
+    <!-- Modal after survey completion -->
+		<div id="bestFriendModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Your New Best Friend</h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="bestFriend"></h2>
+						<img id="bestFriendPhoto" src="#" height= auto width= 100%>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+$("#submitBtn").on("click", function(event) {
+    event.preventDefault();
+
+    var userResponse = {
+        name: $("#name").val().trim(),
+        photo: $("#photoLink").val().trim(),
+        scores: [
+            $("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
+            $("#q4").val().trim(),
+            $("#q5").val().trim(),
+            $("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
+            $("#q10").val().trim()         
+        ]
+        
+    };
+
+    $.post("/api/friends", userResponse, function(data) {
+       $("#bestFriend").text(data.nameMatch);
+       $("#bestFriendPhoto").attr("src", data.imageMatch);
+       $("#bestFriendModal").modal("toggle");
+    });
+
+});
+
+
+
+</script>
+</body>
+</html>
