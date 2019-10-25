@@ -9,12 +9,15 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- CSS -->
     <style>
         p {
             font-size: 20px;
         };
+
     </style>
 </head>
+
 <body>
     <div class="container">
         <br>
@@ -149,16 +152,15 @@
 
           <hr>
 
-          <div class="links"><a href="#">API Friends List</a> | <a href="#">GitHub</a></div>
+          <div class="links"><a href="/api/friends">API Friends List</a> | <a href="https://github.com/JamesLRobbins/Friend-Finder">GitHub</a></div>
     </div>
 
-    <!-- Modal after survey completion -->
+    <!-- Survey Completion Modal -->
 		<div id="bestFriendModal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h3 class="modal-title">Your New Best Friend</h1>
+						<h3 class="modal-title">Your New Best Friend</h3>
 					</div>
 					<div class="modal-body">
 						<h2 id="bestFriend"></h2>
@@ -170,8 +172,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
     
+    <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -180,6 +183,7 @@
 $("#submitBtn").on("click", function(event) {
     event.preventDefault();
 
+    // Capture User Input
     var userResponse = {
         name: $("#name").val().trim(),
         photo: $("#photoLink").val().trim(),
@@ -198,15 +202,16 @@ $("#submitBtn").on("click", function(event) {
         
     };
 
+    // Post User Response
+
     $.post("/api/friends", userResponse, function(data) {
        $("#bestFriend").text(data.nameMatch);
        $("#bestFriendPhoto").attr("src", data.imageMatch);
        $("#bestFriendModal").modal("toggle");
+      
     });
 
 });
-
-
 
 </script>
 </body>
